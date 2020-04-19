@@ -35,7 +35,7 @@ def jdk = tool name: 'java8'
    }
    
    stage('deploy-dev'){
-       def tomcatDevIp = '52.90.102.238'
+       def tomcatDevIp = '3.81.114.181'
 	   def tomcatHome = '/home/ec2-user/tomcat9/'
 	   def webApps = tomcatHome+'webapps/'
 	   def tomcatStart = "${tomcatHome}bin/startup.sh"
