@@ -2,7 +2,7 @@
 node {
    // This is to demo github action	
   
-   def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
+   def mvn = tool (name: 'maven31', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
     // Clone repo
 	git branch: 'master', 
