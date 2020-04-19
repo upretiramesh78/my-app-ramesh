@@ -1,6 +1,18 @@
 
 node {
-   // This is to demo github action	
+   
+def jdk = tool name: 'JDK8'
+  env.JAVA_HOME = "${jdk}"
+
+  echo "jdk installation path is: ${jdk}"
+
+  // next 2 are equivalents
+  sh "${jdk}/bin/java -version"
+
+  // note that simple quote strings are not evaluated by Groovy
+  // substitution is done by shell script using environment
+  sh '$JAVA_HOME/bin/java -version'
+	// This is to demo github action	
   
    def mvn = tool (name: 'maven3', type: 'maven') + '/bin/mvn'
    stage('SCM Checkout'){
